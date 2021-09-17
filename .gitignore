@@ -10,7 +10,7 @@ dist/
 
 # Flask stuff:
 instance/
-/static/.webassets-cache/
+.webassets-cache/
 
 # Environment
 venv/
