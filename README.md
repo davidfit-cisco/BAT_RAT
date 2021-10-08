@@ -5,22 +5,14 @@ To ssh into the remote server do `ssh rattool@10.52.247.154`
 with password: `London2012`. I have set up `cd ~/Documents/BAT_RAT` in `~/.profile` to automatically navigate to the folder 
 of the RAT app.
 
-## Installing Python Packages
-### On the Development Machine
-
-If you install a new python package on the development machine make sure you first are using
-(venv) by running `source venv/Scripts/activate` and then running `pip install [packagename]`. If you need to create a
-text file with a list of the required python packages then run `pip freeze > requirements.txt` (this text file tells 
-you which packages need installing for the app to work).
+## Copying code to remote server
+To copy and paste all code from the current directory of the development machine to the remote server run the script `./deploy.sh`. 
+**Note:** This intentionally does not copy the `venv` folder or the 'requirements.txt' since these are different on Windows and Unix based systems.
 
 ### On the Remote Server
-To install packages on the remote server you must use a proxy; `proxy.esl.cisco.com` should work. Run 
-`pip install [packagename] --proxy proxy.esl.cisco.com` on the remote server to install a specific package or 
-`pip install -r requirements.txt --proxy proxy.esl.cisco.com` to install all the required python packages.
+To reinstall all the python packages (`venv`) on the server simply run `./scripts/reinstall_venv.sh` from the BAT_RAT directory (`/home/rattool/Documents/BAT_RAT`)
 
-## Copying code to remote server
-To copy and paste all code to the remote server run the script `./deploy.sh`. **Note:** This intentionally does not copy the
-`venv` folder since this is different on Windows and Unix based systems.
+
 
 ## Reinstall venv on the server
 If you ever need to reinstall the virtual environment (venv) on the server run:
