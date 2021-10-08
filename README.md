@@ -15,11 +15,11 @@ of the BAT_RAT app.
 To copy and paste all code from the current directory of the development machine to the remote server run the script `./scripts/deploy.sh`. 
 **Note:** This intentionally does not copy the `venv` folder or the `requirements.txt` since these are different on Windows and Unix based systems.
 
-## On the Remote Server
-To reinstall all the python packages (`venv`) on the server simply run `./scripts/reinstall_venv.sh` from within `~/Documents/BAT_RAT`
+## Reinstall Python Packages
+Whilst SSH'd into the remote server, to reinstall all the python packages (`venv`) simply run `./scripts/reinstall_venv.sh` from within `~/Documents/BAT_RAT`.
 
 ## Running the server
-To run the HTTP server run `./run.sh` from within `~/Documents/BAT_RAT`. Once the server is running if you press `Ctrl + C` in the shell, the server will stop running. To keep the server running in the background you must close the shell by pressing the `X` in the rop right corner.
+Whilst SSH'd into the remote server, to run the HTTP server run `./run.sh` from within `~/Documents/BAT_RAT`. Once the server is running if you press `Ctrl + C` in the shell, the server will stop running, so do *NOT* do this. To keep the server running in the background you must close the shell by pressing the `X` in the rop right corner.
 
 ## Troubleshooting
 ### See Processes
@@ -31,9 +31,9 @@ python  11163 rattool    3u  IPv4  68912      0t0  TCP *:5000 (LISTEN)
 python  11163 rattool    4u  IPv4  68912      0t0  TCP *:5000 (LISTEN)
 ```
 
-### Kill Process
-To kill a process run `kill -9 [pid]`.
+### Restarting The Server
+To kill a process run `kill -9 [pid]`. Kill any processes present and the follow the steps above for running the server.
 
 ### Viewing Logs
-To view server logs in realtime run `tail -f logs/log.txt` from within the `~/Documents/RAT` directory. The logs are 
+To view server logs in realtime from the server run `tail -f logs/log.txt` from within the `~/Documents/BAT_RAT` directory. The logs are 
 hardcoded at debug level.
