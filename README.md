@@ -4,7 +4,7 @@
 
 By default the server is running on [http://10.52.247.154:8000/](http://10.52.247.154:8000/) and can be accessed via the browser.
 
-The server is running in development mode, however this is not advised. I think it will be fine, but if possible, launch it properly with a WSGI server (https://www.youtube.com/watch?v=YFBRVJPhDGY)
+The server is running in development mode, however this is not advised. I think it will be fine, but if possible, launch it properly with a WSGI server (https://www.youtube.com/watch?v=YFBRVJPhDGY).
 
 ## SSH to remote server
 To ssh into the remote server do `ssh rattool@10.52.247.154`
@@ -19,7 +19,7 @@ To copy and paste all code from the current directory of the development machine
 To reinstall all the python packages (`venv`) on the server simply run `./scripts/reinstall_venv.sh` from within `~/Documents/BAT_RAT`
 
 ## Running the server
-To run the HTTP server run `./run.sh` from within `~/Documents/BAT_RAT`.
+To run the HTTP server run `./run.sh` from within `~/Documents/BAT_RAT`. Once the server is running if you press `Ctrl + C` in the shell, the server will stop running. To keep the server running in the background you must close the shell by pressing the `X` in the rop right corner.
 
 ## Troubleshooting
 ### See Processes
