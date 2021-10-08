@@ -1,5 +1,11 @@
 # Readme
 
+## Server Info
+
+By default the server is running on `http://10.52.247.154:8000/` and can be accessed via the browser.
+
+The server is running in development mode, however this is not advised. I think it will be fine, but if possible, launch it properly with a WSGI server (https://www.youtube.com/watch?v=YFBRVJPhDGY)
+
 ## SSH to remote server
 To ssh into the remote server do `ssh rattool@10.52.247.154`
 with password: `London2012`. I have set up `cd ~/Documents/BAT_RAT` in `~/.profile` to automatically navigate to the folder 
