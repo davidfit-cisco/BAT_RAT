@@ -31,7 +31,7 @@ python  11163 rattool    4u  IPv4  68912      0t0  TCP *:5000 (LISTEN)
 ```
 
 ### Restarting The Server
-To kill a process run `kill -9 [pid]`. Kill any processes present and the follow the steps above for running the server.
+To kill a process run `kill -9 [pid]`. Kill any IP[v4,v6] processes present shown from `lsof -i` and the follow the steps above for running the server.
 
 ### Viewing Logs
 To view server logs in realtime from the server run `tail -f logs/log.txt` from within the `~/Documents/BAT_RAT` directory. The logs are 
