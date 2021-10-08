@@ -2,7 +2,7 @@
 
 ## Server Info
 
-By default the server is running on `[http://10.52.247.154:8000/](http://10.52.247.154:8000/)` and can be accessed via the browser.
+By default the server is running on [http://10.52.247.154:8000/](http://10.52.247.154:8000/) and can be accessed via the browser.
 
 The server is running in development mode, however this is not advised. I think it will be fine, but if possible, launch it properly with a WSGI server (https://www.youtube.com/watch?v=YFBRVJPhDGY)
 
