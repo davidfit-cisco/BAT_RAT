@@ -18,7 +18,7 @@ To copy and paste all code from the current directory of the development machine
 Whilst SSH'd into the remote server, to reinstall all the python packages (`venv`) simply run `./scripts/reinstall_venv.sh` from within `~/Documents/BAT_RAT`.
 
 ## Running the server
-Whilst SSH'd into the remote server, to run the HTTP server run `./run.sh` from within `~/Documents/BAT_RAT`. Once the server is running if you press `Ctrl + C` in the shell, the server will stop running, so do **NOT** do this. To keep the server running in the background you must close the shell by pressing the `X` in the rop right corner.
+Whilst SSH'd into the remote server, to run the HTTP server run `./scripts/run_server.sh` from within `~/Documents/BAT_RAT`. Once the server is running if you press `Ctrl + C` in the shell, the server will stop running, so do **NOT** do this. To keep the server running in the background you must close the shell by pressing the `X` in the rop right corner.
 
 ## Troubleshooting
 ### See Processes
