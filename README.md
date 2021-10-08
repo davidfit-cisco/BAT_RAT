@@ -9,7 +9,7 @@ The server is running in development mode, however this is not advised. I think 
 ## SSH to remote server
 To ssh into the remote server do `ssh rattool@10.52.247.154`
 with password: `London2012`. I have set up `cd ~/Documents/BAT_RAT` in `~/.profile` to automatically navigate to the folder 
-of the RAT app.
+of the BAT_RAT app.
 
 ## Copying code to remote server
 To copy and paste all code from the current directory of the development machine to the remote server run the script `./deploy.sh`. 
