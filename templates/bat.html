@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+BAT
+{% endblock %}
+
+{% block heading %}
+<h1 class="text-center my-3 py-3" style="background-color: #e3f2fd;">BEMS Analysis Tool (BAT)</h1>
+{% endblock %}
+
+
+{% block content %}
+<div class="text-center mt-3" style="background-color: #e3f2fd;">
+    {% with num_files = "TWO files" %}
+    {% include 'file_upload.html' %}
+    {% endwith %}
+</div>
+{% endblock %}
+
+{% block description %}
+<div class="text-center mt-3" style="background-color: #e3f2fd;">
+    <h3 class="pt-3">Usage</h3>
+    <div class="pb-3" style="white-space: pre-line">
+        <p>
+            The BEMS Analysis Tool requires TWO .csv/.xlsx/.xls files which contain the words "incoming" and "close"
+            respectively, for example each of these pairs of files would be accepted:
+
+            1) "closed-SEPT21" and "incoming-SEPT-esclation"
+            2) "Escalation_Close_AUG2021" and "Escalation_Incoming_AUG2021"
+            3) "Escalation_Incoming_July2021" and "Escalation_Close_July2021"
+
+            The column "BEMS Product" must be present in the incoming and close files.
+            The columns "Escalation Urgency" and "SR Priority" must be present in the incoming file.
+            The column "Root Cause(s)" must be present in the close file.
+
+            All column names must match EXACTLY.
+        </p>
+    </div>
+</div>
+{% endblock %}

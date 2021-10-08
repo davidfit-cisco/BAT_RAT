@@ -1,0 +1,54 @@
+  <!-- Title  -->
+  <div class="row mt-3 ">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <h2 class="m-3">Upload {{ num_files }}</h2>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+
+  <!-- Form container -->
+  <div class="row">
+    <!-- Bootstrap class for formatting -->
+    <div class="col-md-1"></div>
+
+    <!-- The form itself -->
+    <div class="col-md-10">
+      <!-- This part displays error messages on the page-->
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <div class="alert alert-danger" role="alert">
+        Error
+      </div>
+      <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% endwith %}
+
+      <!-- This is the form to upload files-->
+      <form class="form-group input-group form-horizontal d-flex justify-content-around align-items-center" method=post enctype=multipart/form-data>
+        <div class="col-md-5 custom-file">
+          <input class="form-control-file mx-3" type="file" name="upload_files" id="inputGroupFile" multiple>
+          <label class="custom-file-label" for="inputGroupFile">Choose file(s)</label>
+        </div>
+
+        <!-- If we are using the RAT tool add one more HTML input to the form for the store_name -->
+        {% if tool == "RAT" %}
+        <div class="col-md-5">
+          <input class="form-control mx-3" type="text" name="store_name" placeholder="Store Name (default: Dollar General)">
+        </div>
+        {% endif %}
+
+        <div class="col-md-2">
+          <input class="form-control btn btn-primary mx-3" type=submit value=Process>
+        </div>
+      </form>
+
+      <!-- Bootstrap class for formatting -->
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+

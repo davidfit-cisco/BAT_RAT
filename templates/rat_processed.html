@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Processed CSV
+{% endblock %}
+
+{% block heading %}
+<h1 class="text-center my-3" style="background-color: #e3f2fd;">Processed CSV</h1>
+{% endblock %}
+
+{% block content %}
+<div class="text-center">
+
+    {% with data = main_data %}
+    <h2 class="text-center my-3" style="background-color: #e3f2fd;">Main Data</h2>
+    {% include 'rat_table.html' %}
+    {% endwith %}
+
+    {% with data = tcp_data %}
+    {% with tcp = True  %}
+    <h2 class="text-center my-3" style="background-color: #e3f2fd;">TCP Data</h2>
+    {% include 'rat_table.html' %}
+    {% endwith %}
+    {% endwith %}
+</div>
+{% endblock %}

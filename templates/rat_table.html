@@ -1,0 +1,54 @@
+<div class="text-center">
+    <div class="">
+        <table class="table">
+            <thead>
+            <tr>
+                <th></th>
+                {% for day in days %}
+                    <th class="align-content-center">{{ day }}</th>
+                {% endfor %}
+            </tr>
+            </thead>
+            <tbody>
+            {% for option in ['Always', 'Sometimes', 'Never'] %}
+                <tr>
+                    <th>{{ option }}</th>
+                    {% for day in days %}
+                        {% set total = namespace(value=0) %}
+                        <td>
+                            <table>
+                                {% for device_type, device_count in data[day][option].items() %}
+                                    <tr>
+                                        <th style="text-align: right">{{ device_type }}:&nbsp;</th>
+                                        <td>{{ data[day][option][device_type] }}</td>
+                                    </tr>
+                                    {% set total.value = total.value + device_count %}
+                                {% endfor %}
+                                <tr>
+                                    <th style="text-align: right">Total:&nbsp;</th>
+                                    <td>{{ total.value }}</td>
+                                </tr>
+                                {% if tcp is defined and option == "Never" %}
+                                    <tr>
+                                        <th style="text-align: right">Never Registered SPA MACS:&nbsp;</th>
+                                        <td>
+                                            <table>
+                                                {% for mac in tcp_never_macs[day] %}
+                                                    <tr>
+                                                        <th style="text-align: right">MAC:&nbsp;</th>
+                                                        <td>{{ mac }}</td>
+                                                    </tr>
+                                                {% endfor %}
+                                            </table>
+                                        </td>
+                                    </tr>
+                                {% endif %}
+                            </table>
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

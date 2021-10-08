@@ -1,0 +1,88 @@
+<!--
+This page will receive a python dict called bat_data from 'bat_processed.html'.
+The data will either be enterprise_data or mpp_data, but the same tables will be created again for each set of data.
+-->
+
+<!-- Closed escalations table (for both Enterprise and MPP)-->
+<h3 class="text-center">Closed Escalations</h3>
+<div class="table-responsive">
+  <table class="table table-bordered align-middle">
+    <thead>
+    <tr>
+      <th></th>
+      {% for device_type, count in bat_data["escalations"]["closed"].items() %}
+      <th>{{ device_type }}</th>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td>Closed</td>
+      {% for device_type, count in bat_data["escalations"]["closed"].items() %}
+      <td>{{ count }}</td>
+      {% endfor %}
+    </tr>
+    </thead>
+  </table>
+</div>
+
+<!-- Incoming escalations table (for both Enterprise and MPP)-->
+<h3 class="text-center">Incoming Escalations</h3>
+<div class="table-responsive">
+  <table class="table table-bordered align-middle">
+    <thead>
+    <tr>
+      <th></th>
+      {% for device_type, count in bat_data["escalations"]["incoming"].items() %}
+      <th>{{ device_type }}</th>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td>Incoming</td>
+      {% for device_type, count in bat_data["escalations"]["incoming"].items() %}
+      <td>{{ count }}</td>
+      {% endfor %}
+    </tr>
+    </thead>
+  </table>
+</div>
+
+<br>
+
+<!-- Root cause table (for both Enterprise and MPP)-->
+<h3 class="text-center">Root Causes</h3>
+<div class="table-responsive">
+  <table class="table table-bordered align-middle">
+    <thead>
+    <tr>
+      {% for device_type, count in bat_data["root_causes"].items() %}
+      <th>{{ device_type }}</th>
+      {% endfor %}
+    </tr>
+    <tr>
+      {% for device_type, count in bat_data["root_causes"].items() %}
+      <td>{{ count }}</td>
+      {% endfor %}
+    </tr>
+    </thead>
+  </table>
+</div>
+
+<br>
+
+<!-- Severities table (for both Enterprise and MPP)-->
+<h3 class="text-center">Severities</h3>
+<div class="table-responsive">
+  <table class="table table-bordered align-middle">
+    <thead>
+    <tr>
+      {% for device_type, count in bat_data["severities"].items() %}
+      <th>{{ device_type }}</th>
+      {% endfor %}
+    </tr>
+    <tr>
+      {% for device_type, count in bat_data["severities"].items() %}
+      <td>{{ count }}</td>
+      {% endfor %}
+    </tr>
+    </thead>
+  </table>
+</div>

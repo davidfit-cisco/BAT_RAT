@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+RAT
+{% endblock %}
+
+{% block heading %}
+<h1 class="text-center my-3 py-3" style="background-color: #e3f2fd;">Registration Analysis Tool (RAT)</h1>
+{% endblock %}
+
+{% block content %}
+<div class="text-center mt-3" style="background-color: #e3f2fd;">
+
+    {% with num_files = "ONE file" %}
+    {% with tool = "RAT" %}
+    {% include 'file_upload.html' %}
+    {% endwith %}
+    {% endwith %}
+</div>
+{% endblock %}
+
+{% block description %}
+<div class="text-center mt-3" style="background-color: #e3f2fd;">
+    <h3 class="pt-3">Usage</h3>
+    <div class="pb-3" style="white-space: pre-line">
+        <p>
+            The Registration Analysis Tool requires ONE .csv/.xlsx/xls file.
+            OPTIONALLY you can enter the store name you wish to get analysis for (e.g KFC, Boston Market Corporation, Taco Bell).
+            This will default to Dollar General if left empty.
+
+            The inputted spreadsheet MUST contain columns with the names: Device Type, Name1 & Name2.
+            The column TCP? is also used to generate the TCP data but is not strictly required. (Older months did not have a TCP? column)
+        </p>
+    </div>
+</div>
+{% endblock %}

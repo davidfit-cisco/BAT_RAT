@@ -1,0 +1,21 @@
+<!-- All content within 'base.html' is loaded as the base html page -->
+{% extends 'base.html' %}
+
+<!-- The content block in 'base.html'  is replaced with the content block of this page-->
+{% block content %}
+
+<!-- Display the Enterprise table by passing the enterprise_data in as bat_data into the 'bat_table.html' page-->
+<h1 class="text-center my-3" style="background-color: #e3f2fd;">Enterprise</h1>
+{% with bat_data = enterprise_data %}
+    {% include 'bat_table.html' %}
+{% endwith %}
+
+<br>
+
+<!-- Display the MPP table by passing the mpp_data in as bat_data into the 'bat_table.html' page-->
+<h1 class="text-center my-3" style="background-color: #e3f2fd;">MPP</h1>
+{% with bat_data = mpp_data %}
+    {% include 'bat_table.html' %}
+{% endwith %}
+
+{% endblock %}
