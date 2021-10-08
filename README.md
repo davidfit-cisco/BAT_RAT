@@ -25,7 +25,7 @@ Whilst SSH'd into the remote server, to run the HTTP server run `./run.sh` from 
 To see a list of IP[v4,v6] processes use `lsof -i`. If the server is running you should see something like:
 
 ```
-         [pid]
+        [pid]
 python  11162 rattool    3u  IPv4  68912      0t0  TCP *:5000 (LISTEN)
 python  11163 rattool    3u  IPv4  68912      0t0  TCP *:5000 (LISTEN)
 python  11163 rattool    4u  IPv4  68912      0t0  TCP *:5000 (LISTEN)
