@@ -13,7 +13,7 @@ of the BAT_RAT app.
 
 ## Copying code to remote server
 To copy and paste all code from the current directory of the development machine to the remote server run the script `./scripts/deploy.sh`. 
-**Note:** This intentionally does not copy the `venv` folder or the 'requirements.txt' since these are different on Windows and Unix based systems.
+**Note:** This intentionally does not copy the `venv` folder or the `requirements.txt` since these are different on Windows and Unix based systems.
 
 ## On the Remote Server
 To reinstall all the python packages (`venv`) on the server simply run `./scripts/reinstall_venv.sh` from within `~/Documents/BAT_RAT`
