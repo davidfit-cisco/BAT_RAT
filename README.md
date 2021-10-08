@@ -9,20 +9,11 @@ of the RAT app.
 To copy and paste all code from the current directory of the development machine to the remote server run the script `./deploy.sh`. 
 **Note:** This intentionally does not copy the `venv` folder or the 'requirements.txt' since these are different on Windows and Unix based systems.
 
-### On the Remote Server
-To reinstall all the python packages (`venv`) on the server simply run `./scripts/reinstall_venv.sh` from the BAT_RAT directory (`/home/rattool/Documents/BAT_RAT`)
-
-
-
-## Reinstall venv on the server
-If you ever need to reinstall the virtual environment (venv) on the server run:
-1. `rm -rf venv` (to remove `venv`)
-2. `virtualenv venv` (reinitialise `venv`)
-3. `source venv/bin/activate` (to use `venv`)
-4. `pip install -r requirements.txt --proxy proxy.esl.cisco.com` (to install all the packages in `requirements.txt`)
+## On the Remote Server
+To reinstall all the python packages (`venv`) on the server simply run `./scripts/reinstall_venv.sh` from within `~/Documents/BAT_RAT`
 
 ## Running the server
-To run the HTTP server run `./run.sh` from within `~/Documents/RAT`.
+To run the HTTP server run `./run.sh` from within `~/Documents/BAT_RAT`.
 
 ## Troubleshooting
 ### See Processes
